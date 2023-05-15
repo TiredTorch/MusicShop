@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MusicShopc.Models;
 using MusicShopc.Services;
 
 namespace MusicShopc.Controllers
 {
+    [Authorize]
     [Route("api/products")]
     [ApiController]
     public class ProductController : ControllerBase
